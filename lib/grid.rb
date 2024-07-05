@@ -8,7 +8,7 @@ class Grid
   end
 
   def set_cell_value(cell_name, value)
-    @grid[cell_name] = value
+    @grid[cell_name[0].to_sym][cell_name[1].to_i] = value
   end
 
   def to_s
