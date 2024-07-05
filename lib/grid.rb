@@ -1,3 +1,4 @@
+# Class for storing and modifying information about the game grid
 class Grid
   attr_reader :grid
 
