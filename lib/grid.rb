@@ -1,9 +1,9 @@
 class Grid
   def initialize()
     @grid = {
-      A: [nil, nil, nil],
-      B: [nil, nil, nil],
-      C: [nil, nil, nil]
+      A: Array.new(3, " "),
+      B: Array.new(3, " "),
+      C: Array.new(3, " ")
     }
   end
 
