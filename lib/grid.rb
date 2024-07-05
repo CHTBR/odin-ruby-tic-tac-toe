@@ -6,4 +6,8 @@ class Grid
       C1: nil, C2: nil, C3: nil
     }
   end
+
+  def set_cell_value(cell_name, value)
+    @grid[cell_name] = value
+  end
 end
