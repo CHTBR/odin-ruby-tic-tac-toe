@@ -2,7 +2,7 @@
 class Grid
   attr_reader :grid
 
-  def initialize()
+  def initialize
     @grid = {
       A: Array.new(3, " "),
       B: Array.new(3, " "),
