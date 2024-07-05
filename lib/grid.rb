@@ -1,4 +1,6 @@
 class Grid
+  attr_reader :grid
+
   def initialize()
     @grid = {
       A: Array.new(3, " "),
