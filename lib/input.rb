@@ -16,7 +16,7 @@ class Input
   private
 
   def valid_input?(input)
-    return @game_grid.grid.any? { |key, value| key == input[0] && value[input[1]] } if input
+    return @game_grid.grid.any? { |key, value| key == input[0] && value[input[1]] == " " } if input
 
     false
   end
