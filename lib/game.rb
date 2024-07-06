@@ -16,7 +16,7 @@ class Game
     round_counter = 0
     until message || round_counter > 9
       puts @grid_manager
-      message = @round_manager.play_round(@players[0])
+      message = "Player #{player} won." if @round_manager.play_round(@players[0])
       @players.reverse!
       round_counter += 1
     end
