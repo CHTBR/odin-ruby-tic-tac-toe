@@ -21,4 +21,13 @@ class Round
   def won_rows?
     @game_grid.grid.any? { |key, value| value.count(@player) == 3}
   end
+
+  def won_columns?
+    tmp_arr = @game_grid.grid.each_with_object(Array.new(3) { [] }) do |(_key, value), a|
+      a[0] << value[0]
+      a[1] << value[1]
+      a[2] << value[2]
+    end
+    tmp_arr.any? { |array| array.count(@player) == 3 }
+  end
 end
