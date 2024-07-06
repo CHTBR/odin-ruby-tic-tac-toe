@@ -17,4 +17,8 @@ class Round
   def player_won?
     won_rows? || won_columns? || won_diagonals?
   end
+
+  def won_rows?
+    @game_grid.grid.any? { |key, value| value.count(@player) == 3}
+  end
 end
