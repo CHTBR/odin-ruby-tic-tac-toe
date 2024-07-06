@@ -12,14 +12,12 @@ class Game
   end
 
   def game_loop
-    message = nil
-    round_counter = 0
-    until message || round_counter > 9
+    9.times do
       puts @grid_manager
-      message = "Player #{player} won." if @round_manager.play_round(@players[0])
+      return "Player #{@players[0]} won." if @round_manager.play_round(@players[0])
+
       @players.reverse!
-      round_counter += 1
     end
-    message || "A draw!"
+    "A draw!"
   end
 end
