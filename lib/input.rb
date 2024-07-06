@@ -10,7 +10,7 @@ class Input
     return input if valid_input?(input)
 
     puts "Incorrect form of input. Correct example: A1."
-    get_user_input
+    return_user_input
   end
 
   private
