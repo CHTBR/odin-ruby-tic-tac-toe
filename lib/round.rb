@@ -11,4 +11,10 @@ class Round
     @game_grid.set_cell_value(input, @player)
     player_won?
   end
+
+  private
+
+  def player_won?
+    won_rows? || won_columns? || won_diagonals?
+  end
 end
