@@ -3,7 +3,6 @@ require_relative "lib/game"
 # Class for starting a game
 class Main
   def initialize
-    @game_manager = Game.new
     puts %(
 |X|O| |
 |-|-|-|
@@ -12,6 +11,18 @@ class Main
 | | |X|
 
 )
+    new_game_choice
+  end
+
+  private
+
+  def new_game_choice
+    input = ""
+    until input == "N"
+      print "Do you want to start a new game? |Y/N| "
+      input = gets.chomp.upcase
+      new_game if input == "Y"
+    end
   end
 end
 
