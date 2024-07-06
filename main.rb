@@ -24,6 +24,11 @@ class Main
       new_game if input == "Y"
     end
   end
+
+  def new_game
+    @game_manager = Game.new
+    puts @game_manager.game_loop
+  end
 end
 
 Main.new

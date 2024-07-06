@@ -4,8 +4,8 @@ class Input
     @game_grid = game_grid
   end
 
-  def return_user_input
-    print "Select your move (RowColumn): "
+  def return_player_input(player)
+    print "#{player}: Select your move (RowColumn): "
     input = return_converted_input
     return input if valid_input?(input)
 
