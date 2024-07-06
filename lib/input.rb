@@ -6,7 +6,7 @@ class Input
 
   def get_user_input
     print "Select your move (RowColumn): "
-    input = gets.chomp.upcase
+    input = get_converted_input()
     return input if valid_input?(input)
     puts "Incorrect form of input. Correct example: A1."
     get_user_input
@@ -14,7 +14,15 @@ class Input
 
   private
   def valid_input?(input)
-    return @game_grid.grid.any? {|key, value| key == input[0].to_sym && value[input[1].to_i]} if input.size == 2
+    return @game_grid.grid.any? {|key, value| key == input[0] && value[input[1]]} if input
     false
+  end
+
+  def get_converted_input
+    raw_input = gets.chomp.upcase
+    if raw_input.size == 2
+      return [raw_input[0].to_sym, raw_input[1].to_i]
+    end
+    nil
   end
 end
