@@ -5,4 +5,10 @@ class Round
     @game_grid = game_grid
     @player = player
   end
+
+  def play_round
+    input = @input_manager
+    @game_grid.set_cell_value(input, @player)
+    player_won?
+  end
 end
