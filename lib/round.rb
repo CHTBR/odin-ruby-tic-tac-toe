@@ -7,7 +7,7 @@ class Round
 
   def play_round(player)
     @player = player
-    input = @input_manager.return_user_input(@player)
+    input = @input_manager.return_player_input(@player)
     @game_grid.set_cell_value(input, @player)
     player_won?
   end
